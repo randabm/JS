@@ -14,6 +14,8 @@
     <button onclick="calculaIndiceMasaCorporal()">IMC</button>
     <button onclick="media()">Media</button>
     <button onclick="CalcularAreaTriangulo()">Area Triangulo</button>
+    <button onclick="CalcularPrecioConIva()">Precio con iva</button>
+
 
 
 <script>
@@ -139,6 +141,37 @@
                     alert("El resultado es " +area);
                  
                 }
+
+
+
+                /*********************************************************************   
+                PrecioConConIva: recibe el precio y devuelve el precio con iva. (21%)          
+                **********************************************************************/
+                function PrecioConConIva(precio){
+
+                    let resu = (Number(precio))*0.21;
+                    return resu;
+
+                }
+
+                /***********************************************
+                 * 
+                 *  CalcularPrecioConIva: pregunta el precio, llama a PrecioConConIva y muestra al usuario el 
+                 * precio con iva.
+                 * 
+                 * **********************/
+
+                function CalcularPrecioConIva(){
+                    let precio=prompt("Dime el precio ")
+
+
+                    resu = PrecioConConIva (precio);
+
+                    alert("El precio con el iva es: " +resu);
+
+                }
+
+
 
 
     </script>
